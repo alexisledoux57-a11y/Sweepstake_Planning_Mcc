@@ -1,87 +1,171 @@
 import fs from "node:fs";
 
-const apiKey = process.env.ANTHROPIC_API_KEY;
-const model = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5";
+const apiKey = process.env.API_FOOTBALL_KEY;
+const API_URL = "https://v3.football.api-sports.io/fixtures?league=1&season=2026";
 
 if (!apiKey) {
-  console.log("ANTHROPIC_API_KEY is not set. Leaving results.json unchanged.");
+  console.log("API_FOOTBALL_KEY is not set. Leaving results.json unchanged.");
   process.exit(0);
 }
 
-const teams = [
+// Team names used by the sweepstake app. API names are normalised to these names.
+const TEAM_ALIASES = new Map(Object.entries({
+  "USA": "United States",
+  "United States": "United States",
+  "United States of America": "United States",
+  "Korea Republic": "South Korea",
+  "South Korea": "South Korea",
+  "Czech Republic": "Czechia",
+  "Czechia": "Czechia",
+  "Bosnia and Herzegovina": "Bosnia & Herz.",
+  "Bosnia & Herzegovina": "Bosnia & Herz.",
+  "Bosnia-Herzegovina": "Bosnia & Herz.",
+  "Bosnia & Herz.": "Bosnia & Herz.",
+  "DR Congo": "Congo DR",
+  "Congo DR": "Congo DR",
+  "Congo Democratic Republic": "Congo DR",
+  "Curaçao": "Curacao",
+  "Curacao": "Curacao",
+  "Côte d'Ivoire": "Ivory Coast",
+  "Cote d'Ivoire": "Ivory Coast",
+  "Ivory Coast": "Ivory Coast",
+  "Saudi Arabia": "Saudi Arabia",
+  "Cape Verde": "Cape Verde",
+  "New Zealand": "New Zealand",
+  "South Africa": "South Africa"
+}));
+
+const APP_TEAMS = new Set([
   "Spain","Iran","Congo DR","France","Australia","Saudi Arabia","England","Tunisia","South Africa",
   "Portugal","Bosnia & Herz.","Panama","Argentina","South Korea","Cape Verde","Brazil","Algeria","Qatar",
   "Germany","Ghana","Uzbekistan","Netherlands","Egypt","New Zealand","Norway","Paraguay","Iraq",
   "Belgium","Czechia","Jordan","Colombia","Ivory Coast","Curacao","Morocco","Scotland","Haiti",
   "United States","Canada","Switzerland","Austria","Uruguay","Sweden","Japan","Senegal","Mexico","Croatia","Ecuador","Turkey"
-];
+]);
 
-const today = new Date().toLocaleDateString("en-GB", {
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-  timeZone: "Europe/London"
-});
-
-const prompt = `Today is ${today}. Search the web for the latest 2026 FIFA World Cup match results.
-
-I need results only for these exact team names:
-${teams.join(", ")}
-
-Return ONLY valid JSON, with no markdown fences, in this format:
-{
-  "date": "${today}",
-  "matchesPlayed": 2,
-  "results": [
-    {"team":"Mexico","stage":"gs1","result":"W","score":"2-0"},
-    {"team":"South Africa","stage":"gs1","result":"L","score":"0-2"},
-    {"team":"Spain","qualify_r32":true}
-  ]
+function norm(s) {
+  return String(s || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/gi, " ")
+    .trim()
+    .toLowerCase();
 }
 
-Rules:
-- Include only completed matches.
-- For group games, use stage gs1, gs2, or gs3.
-- For knockouts, use r32, r16, qf, sf, or f.
-- Result must be W, D, or L.
-- Team names must match the exact list above.
-- Include both teams from each completed match.
-- Add qualify_r32:true only once a team is mathematically qualified from the group stage.`;
+function appTeam(apiName) {
+  if (!apiName) return null;
+  if (TEAM_ALIASES.has(apiName)) return TEAM_ALIASES.get(apiName);
+  for (const [from, to] of TEAM_ALIASES) {
+    if (norm(apiName) === norm(from)) return to;
+  }
+  for (const t of APP_TEAMS) {
+    if (norm(apiName) === norm(t)) return t;
+  }
+  return apiName;
+}
 
-const response = await fetch("https://api.anthropic.com/v1/messages", {
-  method: "POST",
-  headers: {
-    "content-type": "application/json",
-    "x-api-key": apiKey,
-    "anthropic-version": "2023-06-01"
-  },
-  body: JSON.stringify({
-    model,
-    max_tokens: 4000,
-    tools: [{ type: "web_search_20250305", name: "web_search" }],
-    messages: [{ role: "user", content: prompt }]
-  })
+function getGroupStageMapFromIndex() {
+  const html = fs.readFileSync("index.html", "utf8");
+  const match = html.match(/var\s+SCH\s*=\s*(\[[\s\S]*?\]);\s*var\s+STAGES/);
+  if (!match) return new Map();
+  const sch = Function(`"use strict"; return (${match[1]});`)();
+  const map = new Map();
+  for (const f of sch) {
+    const h = appTeam(f.h);
+    const a = appTeam(f.a);
+    const key = [norm(h), norm(a)].sort().join("|");
+    map.set(key, f.st); // gs1, gs2, gs3
+  }
+  return map;
+}
+
+function stageFromFixture(fixture, home, away, groupStageMap) {
+  const key = [norm(home), norm(away)].sort().join("|");
+  if (groupStageMap.has(key)) return groupStageMap.get(key);
+
+  const round = String(fixture.league?.round || fixture.fixture?.round || "").toLowerCase();
+  if (round.includes("round of 32")) return "r32";
+  if (round.includes("round of 16")) return "r16";
+  if (round.includes("quarter")) return "qf";
+  if (round.includes("semi")) return "sf";
+  if (round.includes("final")) return "f";
+
+  // Fallback: if API round has group matchday wording.
+  if (round.includes("group") && round.includes("1")) return "gs1";
+  if (round.includes("group") && round.includes("2")) return "gs2";
+  if (round.includes("group") && round.includes("3")) return "gs3";
+
+  return null;
+}
+
+function resultFor(goalsFor, goalsAgainst, isKnockoutWinner) {
+  if (goalsFor > goalsAgainst) return "W";
+  if (goalsFor < goalsAgainst) return "L";
+  if (isKnockoutWinner === true) return "W";
+  if (isKnockoutWinner === false) return "L";
+  return "D";
+}
+
+function completedStatus(short) {
+  return ["FT", "AET", "PEN"].includes(short);
+}
+
+const response = await fetch(API_URL, {
+  headers: { "x-apisports-key": apiKey }
 });
 
 if (!response.ok) {
   const err = await response.text();
-  throw new Error(`Anthropic API error ${response.status}: ${err}`);
+  throw new Error(`API-Football error ${response.status}: ${err}`);
 }
 
 const data = await response.json();
-const text = (data.content || [])
-  .filter((block) => block.type === "text")
-  .map((block) => block.text)
-  .join("")
-  .replace(/```json|```/g, "")
-  .trim();
-
-const match = text.match(/\{[\s\S]*\}/);
-const parsed = JSON.parse(match ? match[0] : text);
-
-if (!parsed || !Array.isArray(parsed.results)) {
-  throw new Error("Model response did not contain a results array.");
+if (!Array.isArray(data.response)) {
+  throw new Error("API-Football response did not contain a response array.");
 }
 
-fs.writeFileSync("results.json", JSON.stringify(parsed, null, 2) + "\n", "utf8");
-console.log(`Updated results.json with ${parsed.results.length} result rows.`);
+const groupStageMap = getGroupStageMapFromIndex();
+const resultRows = [];
+let matchesPlayed = 0;
+
+for (const f of data.response) {
+  const status = f.fixture?.status?.short;
+  if (!completedStatus(status)) continue;
+
+  const home = appTeam(f.teams?.home?.name);
+  const away = appTeam(f.teams?.away?.name);
+  if (!APP_TEAMS.has(home) || !APP_TEAMS.has(away)) continue;
+
+  const stage = stageFromFixture(f, home, away, groupStageMap);
+  if (!stage) {
+    console.log(`Skipping completed match because stage could not be mapped: ${home} vs ${away} (${f.league?.round || "unknown round"})`);
+    continue;
+  }
+
+  const hg = f.goals?.home;
+  const ag = f.goals?.away;
+  if (typeof hg !== "number" || typeof ag !== "number") continue;
+
+  const score = `${hg}-${ag}`;
+  const homeWinner = f.teams?.home?.winner;
+  const awayWinner = f.teams?.away?.winner;
+
+  resultRows.push({ team: home, stage, result: resultFor(hg, ag, homeWinner), score });
+  resultRows.push({ team: away, stage, result: resultFor(ag, hg, awayWinner), score });
+  matchesPlayed += 1;
+}
+
+const output = {
+  date: new Date().toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Europe/London"
+  }),
+  matchesPlayed,
+  results: resultRows
+};
+
+fs.writeFileSync("results.json", JSON.stringify(output, null, 2) + "\n", "utf8");
+console.log(`Updated results.json with ${matchesPlayed} completed matches and ${resultRows.length} team rows.`);
