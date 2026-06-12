@@ -121,6 +121,15 @@ if (!response.ok) {
 }
 
 const data = await response.json();
+console.log("API response keys:", Object.keys(data));
+console.log("API errors:", JSON.stringify(data.errors || {}, null, 2));
+console.log("API results count:", data.results);
+console.log("API response length:", Array.isArray(data.response) ? data.response.length : "not an array");
+
+if (Array.isArray(data.response) && data.response.length > 0) {
+  console.log("First fixture sample:", JSON.stringify(data.response[0], null, 2));
+}
+
 if (!Array.isArray(data.response)) {
   throw new Error("API-Football response did not contain a response array.");
 }
