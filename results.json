@@ -1,5 +1,30 @@
 {
   "date": "12 June 2026",
-  "matchesPlayed": 0,
-  "results": []
+  "matchesPlayed": 2,
+  "results": [
+    {
+      "team": "Mexico",
+      "stage": "gs1",
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "team": "South Africa",
+      "stage": "gs1",
+      "result": "L",
+      "score": "2-0"
+    },
+    {
+      "team": "South Korea",
+      "stage": "gs1",
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "team": "Czechia",
+      "stage": "gs1",
+      "result": "L",
+      "score": "2-1"
+    }
+  ]
 }
