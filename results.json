@@ -1,6 +1,6 @@
 {
   "date": "12 June 2026",
-  "matchesPlayed": 2,
+  "matchesPlayed": 3,
   "results": [
     {
       "team": "Mexico",
@@ -25,6 +25,18 @@
       "stage": "gs1",
       "result": "L",
       "score": "2-1"
+    },
+    {
+      "team": "Canada",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
+    },
+    {
+      "team": "Bosnia & Herz.",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
     }
   ]
 }
