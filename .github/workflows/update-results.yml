@@ -3,8 +3,8 @@ name: Update World Cup results
 on:
   workflow_dispatch:
   schedule:
-    # Runs every 2 hours. GitHub Actions uses UTC time.
-    - cron: "0 */2 * * *"
+    # Runs every 4 hours. GitHub Actions uses UTC time.
+    - cron: "0 */4 * * *"
 
 permissions:
   contents: write
@@ -12,16 +12,19 @@ permissions:
 jobs:
   update-results:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Update results.json from API-Football
+      - name: Update results.json from football-data.org
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: node scripts/update-results.mjs
 
       - name: Commit updated results
