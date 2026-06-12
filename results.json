@@ -1,9 +1,5 @@
 {
   "date": "12 June 2026",
   "matchesPlayed": 0,
-  "results": [
-    {
-      "_example": "Delete this example row once you add real results. Valid rows look like: {\"team\":\"Mexico\",\"stage\":\"gs1\",\"result\":\"W\",\"score\":\"2-0\"}"
-    }
-  ]
+  "results": []
 }
