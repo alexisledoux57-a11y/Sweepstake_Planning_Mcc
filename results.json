@@ -1,6 +1,6 @@
 {
-  "date": "13 June 2026",
-  "matchesPlayed": 4,
+  "date": "14 June 2026",
+  "matchesPlayed": 5,
   "results": [
     {
       "team": "Mexico",
@@ -49,6 +49,18 @@
       "stage": "gs1",
       "result": "L",
       "score": "4-1"
+    },
+    {
+      "team": "Qatar",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
+    },
+    {
+      "team": "Switzerland",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
     }
   ]
 }
