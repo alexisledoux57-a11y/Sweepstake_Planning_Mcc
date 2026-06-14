@@ -1,6 +1,6 @@
 {
-  "date": "14 June 2026",
-  "matchesPlayed": 8,
+  "date": "15 June 2026",
+  "matchesPlayed": 10,
   "results": [
     {
       "team": "Mexico",
@@ -97,6 +97,30 @@
       "stage": "gs1",
       "result": "L",
       "score": "2-0"
+    },
+    {
+      "team": "Germany",
+      "stage": "gs1",
+      "result": "W",
+      "score": "7-1"
+    },
+    {
+      "team": "Curacao",
+      "stage": "gs1",
+      "result": "L",
+      "score": "7-1"
+    },
+    {
+      "team": "Netherlands",
+      "stage": "gs1",
+      "result": "D",
+      "score": "2-2"
+    },
+    {
+      "team": "Japan",
+      "stage": "gs1",
+      "result": "D",
+      "score": "2-2"
     }
   ]
 }
