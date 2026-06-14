@@ -465,7 +465,7 @@ function buildCard(f,owned){
 
 function renderLB(){
   var ranked=getRanked();
-  var medals=['&#55358;&#56647;','&#55358;&#56648;','&#55358;&#56649;'];var cls=['g','s','b'];
+  var medals=['🥇','🥈','🥉'];var cls=['g','s','b'];
   document.getElementById('lbc').innerHTML=ranked.map(function(p,i){
     var pr=prevRanks[p.name];var diff=(pr!==null&&pr!==undefined)?pr-(i+1):null;
     var mv='';
@@ -505,7 +505,7 @@ function renderMy(){
   if(!name){el.innerHTML='<p class="nr">Select your name above.</p>';return;}
   var p=PAR.find(function(x){return x.name===name;});if(!p){el.innerHTML='<p class="nr">Not found.</p>';return;}
   var totalPts=calcPts(p);var ranked=getRanked();var rank=ranked.findIndex(function(x){return x.name===name;})+1;
-  var medals=['1st &#55358;&#56647;','2nd &#55358;&#56648;','3rd &#55358;&#56649;'];
+  var medals=['1st 🥇','2nd 🥈','3rd 🥉'];
   var tcHtml='<div class="tc-grid">';
   p.teams.forEach(function(tn){
     var tp=0;STAGES.forEach(function(s){if(s.type==='qualify'){if(results[tn]&&results[tn].qualify_r32)tp+=s.pts.Q;}else{var r=results[tn]?results[tn][s.id]:null;if(r==='W')tp+=s.pts.W;if(r==='D'&&s.hasDraw)tp+=s.pts.D;}});
@@ -593,7 +593,7 @@ function exportImg(){
   ctx.font='13px sans-serif';ctx.fillStyle='rgba(255,255,255,.6)';
   ctx.fillText('Sweepstake Standings · '+new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long'}),W/2,62);
   ctx.font='26px serif';ctx.fillText('&#55356;&#57286;',W/2,95);
-  var medals=['&#55358;&#56647;','&#55358;&#56648;','&#55358;&#56649;'];
+  var medals=['🥇','🥈','🥉'];
   ranked.forEach(function(p,i){
     var y=hH+i*rH;
     ctx.fillStyle=i===0&&p.pts>0?'#fef9ee':i%2===0?'#ffffff':'#f8f9fc';
