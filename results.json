@@ -1,6 +1,6 @@
 {
   "date": "14 June 2026",
-  "matchesPlayed": 5,
+  "matchesPlayed": 8,
   "results": [
     {
       "team": "Mexico",
@@ -61,6 +61,42 @@
       "stage": "gs1",
       "result": "D",
       "score": "1-1"
+    },
+    {
+      "team": "Brazil",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
+    },
+    {
+      "team": "Morocco",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
+    },
+    {
+      "team": "Haiti",
+      "stage": "gs1",
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "team": "Scotland",
+      "stage": "gs1",
+      "result": "W",
+      "score": "0-1"
+    },
+    {
+      "team": "Australia",
+      "stage": "gs1",
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "team": "Turkey",
+      "stage": "gs1",
+      "result": "L",
+      "score": "2-0"
     }
   ]
 }
