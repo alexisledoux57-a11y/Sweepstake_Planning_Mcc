@@ -1,6 +1,6 @@
 {
   "date": "15 June 2026",
-  "matchesPlayed": 10,
+  "matchesPlayed": 12,
   "results": [
     {
       "team": "Mexico",
@@ -121,6 +121,30 @@
       "stage": "gs1",
       "result": "D",
       "score": "2-2"
+    },
+    {
+      "team": "Ivory Coast",
+      "stage": "gs1",
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "team": "Ecuador",
+      "stage": "gs1",
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "team": "Sweden",
+      "stage": "gs1",
+      "result": "W",
+      "score": "5-1"
+    },
+    {
+      "team": "Tunisia",
+      "stage": "gs1",
+      "result": "L",
+      "score": "5-1"
     }
   ]
 }
