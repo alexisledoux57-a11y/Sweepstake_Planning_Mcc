@@ -1,6 +1,6 @@
 {
   "date": "17 June 2026",
-  "matchesPlayed": 19,
+  "matchesPlayed": 20,
   "results": [
     {
       "team": "Mexico",
@@ -229,6 +229,18 @@
       "stage": "gs1",
       "result": "L",
       "score": "3-1"
+    },
+    {
+      "team": "Portugal",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
+    },
+    {
+      "team": "Congo DR",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
     }
   ]
 }
