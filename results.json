@@ -1,6 +1,6 @@
 {
   "date": "17 June 2026",
-  "matchesPlayed": 17,
+  "matchesPlayed": 19,
   "results": [
     {
       "team": "Mexico",
@@ -205,6 +205,30 @@
       "stage": "gs1",
       "result": "W",
       "score": "1-4"
+    },
+    {
+      "team": "Argentina",
+      "stage": "gs1",
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "team": "Algeria",
+      "stage": "gs1",
+      "result": "L",
+      "score": "3-0"
+    },
+    {
+      "team": "Austria",
+      "stage": "gs1",
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "team": "Jordan",
+      "stage": "gs1",
+      "result": "L",
+      "score": "3-1"
     }
   ]
 }
