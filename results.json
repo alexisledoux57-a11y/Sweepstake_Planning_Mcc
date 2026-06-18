@@ -1,6 +1,6 @@
 {
   "date": "18 June 2026",
-  "matchesPlayed": 23,
+  "matchesPlayed": 24,
   "results": [
     {
       "team": "Mexico",
@@ -277,6 +277,18 @@
       "stage": "gs1",
       "result": "W",
       "score": "1-3"
+    },
+    {
+      "team": "Spain",
+      "stage": "gs1",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Cape Verde",
+      "stage": "gs1",
+      "result": "D",
+      "score": "0-0"
     }
   ]
 }
