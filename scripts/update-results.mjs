@@ -238,6 +238,39 @@ for (const match of data.matches) {
   matchesPlayed += 1;
 }
 
+// Manual overrides for games missing from the API
+const manualResults = [
+  {
+    team: "Spain",
+    stage: "gs1",
+    result: "D",
+    score: "0-0"
+  },
+  {
+    team: "Cape Verde",
+    stage: "gs1",
+    result: "D",
+    score: "0-0"
+  }
+];
+
+// Add manual results only if they are missing
+for (const manualResult of manualResults) {
+  const alreadyExists = resultRows.some(
+    row =>
+      row.team === manualResult.team &&
+      row.stage === manualResult.stage
+  );
+
+  if (!alreadyExists) {
+    console.log(`Adding manual result: ${manualResult.team} ${manualResult.stage}`);
+    resultRows.push(manualResult);
+  }
+}
+
+// Recalculate matches played after adding manual results
+matchesPlayed = Math.floor(resultRows.length / 2);
+
 const output = {
   date: new Date().toLocaleDateString("en-GB", {
     day: "numeric",
