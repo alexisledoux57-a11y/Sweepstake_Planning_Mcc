@@ -1,6 +1,6 @@
 {
   "date": "20 June 2026",
-  "matchesPlayed": 31,
+  "matchesPlayed": 33,
   "results": [
     {
       "team": "Mexico",
@@ -25,6 +25,18 @@
       "stage": "gs1",
       "result": "L",
       "score": "2-1"
+    },
+    {
+      "team": "Canada",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
+    },
+    {
+      "team": "Bosnia & Herz.",
+      "stage": "gs1",
+      "result": "D",
+      "score": "1-1"
     },
     {
       "team": "United States",
@@ -361,6 +373,18 @@
       "stage": "gs2",
       "result": "W",
       "score": "0-1"
+    },
+    {
+      "team": "Netherlands",
+      "stage": "gs2",
+      "result": "W",
+      "score": "5-1"
+    },
+    {
+      "team": "Sweden",
+      "stage": "gs2",
+      "result": "L",
+      "score": "5-1"
     },
     {
       "team": "Spain",
