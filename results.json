@@ -1,6 +1,6 @@
 {
   "date": "20 June 2026",
-  "matchesPlayed": 30,
+  "matchesPlayed": 32,
   "results": [
     {
       "team": "Mexico",
@@ -346,6 +346,30 @@
     },
     {
       "team": "Morocco",
+      "stage": "gs2",
+      "result": "W",
+      "score": "0-1"
+    },
+    {
+      "team": "Brazil",
+      "stage": "gs2",
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "team": "Haiti",
+      "stage": "gs2",
+      "result": "L",
+      "score": "3-0"
+    },
+    {
+      "team": "Turkey",
+      "stage": "gs2",
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "team": "Paraguay",
       "stage": "gs2",
       "result": "W",
       "score": "0-1"
