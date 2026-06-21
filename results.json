@@ -1,6 +1,6 @@
 {
-  "date": "20 June 2026",
-  "matchesPlayed": 33,
+  "date": "21 June 2026",
+  "matchesPlayed": 35,
   "results": [
     {
       "team": "Mexico",
@@ -385,6 +385,30 @@
       "stage": "gs2",
       "result": "L",
       "score": "5-1"
+    },
+    {
+      "team": "Germany",
+      "stage": "gs2",
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "team": "Ivory Coast",
+      "stage": "gs2",
+      "result": "L",
+      "score": "2-1"
+    },
+    {
+      "team": "Ecuador",
+      "stage": "gs2",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Curacao",
+      "stage": "gs2",
+      "result": "D",
+      "score": "0-0"
     },
     {
       "team": "Spain",
