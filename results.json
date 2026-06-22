@@ -1,6 +1,6 @@
 {
   "date": "22 June 2026",
-  "matchesPlayed": 38,
+  "matchesPlayed": 39,
   "results": [
     {
       "team": "Mexico",
@@ -445,6 +445,18 @@
       "stage": "gs2",
       "result": "D",
       "score": "0-0"
+    },
+    {
+      "team": "New Zealand",
+      "stage": "gs2",
+      "result": "L",
+      "score": "1-3"
+    },
+    {
+      "team": "Egypt",
+      "stage": "gs2",
+      "result": "W",
+      "score": "1-3"
     },
     {
       "team": "Spain",
