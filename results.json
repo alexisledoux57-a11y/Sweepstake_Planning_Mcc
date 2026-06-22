@@ -1,6 +1,6 @@
 {
-  "date": "21 June 2026",
-  "matchesPlayed": 37,
+  "date": "22 June 2026",
+  "matchesPlayed": 38,
   "results": [
     {
       "team": "Mexico",
@@ -433,6 +433,18 @@
       "stage": "gs2",
       "result": "L",
       "score": "4-0"
+    },
+    {
+      "team": "Belgium",
+      "stage": "gs2",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Iran",
+      "stage": "gs2",
+      "result": "D",
+      "score": "0-0"
     },
     {
       "team": "Spain",
