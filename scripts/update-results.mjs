@@ -251,6 +251,18 @@ const manualResults = [
     stage: "gs1",
     result: "D",
     score: "0-0"
+  },
+    {
+    team: "Uruguay",
+    stage: "gs2",
+    result: "D",
+    score: "2-2"
+  },
+  {
+    team: "Cape Verde",
+    stage: "gs2",
+    result: "D",
+    score: "2-2"
   }
 ];
 
