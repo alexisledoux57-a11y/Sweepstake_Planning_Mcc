@@ -1,6 +1,6 @@
 {
   "date": "23 June 2026",
-  "matchesPlayed": 42,
+  "matchesPlayed": 43,
   "results": [
     {
       "team": "Mexico",
@@ -493,6 +493,18 @@
       "stage": "gs2",
       "result": "L",
       "score": "3-2"
+    },
+    {
+      "team": "Jordan",
+      "stage": "gs2",
+      "result": "L",
+      "score": "1-2"
+    },
+    {
+      "team": "Algeria",
+      "stage": "gs2",
+      "result": "W",
+      "score": "1-2"
     },
     {
       "team": "Spain",
