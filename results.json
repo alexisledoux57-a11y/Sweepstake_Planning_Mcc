@@ -1,6 +1,6 @@
 {
-  "date": "23 June 2026",
-  "matchesPlayed": 45,
+  "date": "24 June 2026",
+  "matchesPlayed": 47,
   "results": [
     {
       "team": "Mexico",
@@ -517,6 +517,30 @@
       "stage": "gs3",
       "result": "L",
       "score": "5-0"
+    },
+    {
+      "team": "England",
+      "stage": "gs2",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Ghana",
+      "stage": "gs2",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Panama",
+      "stage": "gs2",
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "team": "Croatia",
+      "stage": "gs2",
+      "result": "W",
+      "score": "0-1"
     },
     {
       "team": "Spain",
