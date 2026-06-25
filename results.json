@@ -1,6 +1,6 @@
 {
-  "date": "24 June 2026",
-  "matchesPlayed": 50,
+  "date": "25 June 2026",
+  "matchesPlayed": 52,
   "results": [
     {
       "team": "Mexico",
@@ -577,6 +577,30 @@
       "stage": "gs3",
       "result": "L",
       "score": "3-1"
+    },
+    {
+      "team": "Morocco",
+      "stage": "gs3",
+      "result": "W",
+      "score": "4-2"
+    },
+    {
+      "team": "Haiti",
+      "stage": "gs3",
+      "result": "L",
+      "score": "4-2"
+    },
+    {
+      "team": "Scotland",
+      "stage": "gs3",
+      "result": "L",
+      "score": "0-3"
+    },
+    {
+      "team": "Brazil",
+      "stage": "gs3",
+      "result": "W",
+      "score": "0-3"
     },
     {
       "team": "Spain",
