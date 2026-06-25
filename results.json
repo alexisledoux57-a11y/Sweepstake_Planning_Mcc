@@ -1,6 +1,6 @@
 {
   "date": "25 June 2026",
-  "matchesPlayed": 52,
+  "matchesPlayed": 54,
   "results": [
     {
       "team": "Mexico",
@@ -601,6 +601,30 @@
       "stage": "gs3",
       "result": "W",
       "score": "0-3"
+    },
+    {
+      "team": "Czechia",
+      "stage": "gs3",
+      "result": "L",
+      "score": "0-3"
+    },
+    {
+      "team": "Mexico",
+      "stage": "gs3",
+      "result": "W",
+      "score": "0-3"
+    },
+    {
+      "team": "South Africa",
+      "stage": "gs3",
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "team": "South Korea",
+      "stage": "gs3",
+      "result": "L",
+      "score": "1-0"
     },
     {
       "team": "Spain",
