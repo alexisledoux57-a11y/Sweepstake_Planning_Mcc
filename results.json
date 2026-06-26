@@ -1,6 +1,6 @@
 {
   "date": "26 June 2026",
-  "matchesPlayed": 60,
+  "matchesPlayed": 62,
   "results": [
     {
       "team": "Mexico",
@@ -697,6 +697,30 @@
       "stage": "gs3",
       "result": "D",
       "score": "0-0"
+    },
+    {
+      "team": "Norway",
+      "stage": "gs3",
+      "result": "L",
+      "score": "1-4"
+    },
+    {
+      "team": "France",
+      "stage": "gs3",
+      "result": "W",
+      "score": "1-4"
+    },
+    {
+      "team": "Senegal",
+      "stage": "gs3",
+      "result": "W",
+      "score": "5-0"
+    },
+    {
+      "team": "Iraq",
+      "stage": "gs3",
+      "result": "L",
+      "score": "5-0"
     },
     {
       "team": "Spain",
