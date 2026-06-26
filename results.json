@@ -1,6 +1,6 @@
 {
   "date": "26 June 2026",
-  "matchesPlayed": 58,
+  "matchesPlayed": 60,
   "results": [
     {
       "team": "Mexico",
@@ -673,6 +673,30 @@
       "stage": "gs3",
       "result": "D",
       "score": "1-1"
+    },
+    {
+      "team": "Turkey",
+      "stage": "gs3",
+      "result": "W",
+      "score": "3-2"
+    },
+    {
+      "team": "United States",
+      "stage": "gs3",
+      "result": "L",
+      "score": "3-2"
+    },
+    {
+      "team": "Paraguay",
+      "stage": "gs3",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Australia",
+      "stage": "gs3",
+      "result": "D",
+      "score": "0-0"
     },
     {
       "team": "Spain",
