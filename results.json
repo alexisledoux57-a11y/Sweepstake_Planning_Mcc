@@ -1,6 +1,6 @@
 {
   "date": "27 June 2026",
-  "matchesPlayed": 63,
+  "matchesPlayed": 65,
   "results": [
     {
       "team": "Mexico",
@@ -733,6 +733,30 @@
       "stage": "gs3",
       "result": "W",
       "score": "0-1"
+    },
+    {
+      "team": "New Zealand",
+      "stage": "gs3",
+      "result": "L",
+      "score": "1-5"
+    },
+    {
+      "team": "Belgium",
+      "stage": "gs3",
+      "result": "W",
+      "score": "1-5"
+    },
+    {
+      "team": "Egypt",
+      "stage": "gs3",
+      "result": "D",
+      "score": "1-1"
+    },
+    {
+      "team": "Iran",
+      "stage": "gs3",
+      "result": "D",
+      "score": "1-1"
     },
     {
       "team": "Spain",
