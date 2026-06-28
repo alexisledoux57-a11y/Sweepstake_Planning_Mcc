@@ -1,6 +1,6 @@
 {
-  "date": "27 June 2026",
-  "matchesPlayed": 65,
+  "date": "28 June 2026",
+  "matchesPlayed": 69,
   "results": [
     {
       "team": "Mexico",
@@ -757,6 +757,54 @@
       "stage": "gs3",
       "result": "D",
       "score": "1-1"
+    },
+    {
+      "team": "Panama",
+      "stage": "gs3",
+      "result": "L",
+      "score": "0-2"
+    },
+    {
+      "team": "England",
+      "stage": "gs3",
+      "result": "W",
+      "score": "0-2"
+    },
+    {
+      "team": "Croatia",
+      "stage": "gs3",
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "team": "Ghana",
+      "stage": "gs3",
+      "result": "L",
+      "score": "2-1"
+    },
+    {
+      "team": "Colombia",
+      "stage": "gs3",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Portugal",
+      "stage": "gs3",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Congo DR",
+      "stage": "gs3",
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "team": "Uzbekistan",
+      "stage": "gs3",
+      "result": "L",
+      "score": "3-1"
     },
     {
       "team": "Spain",
