@@ -278,17 +278,28 @@ const manualResults = [
   },
   {
     team: "Portugal",
-    stage: "gs5",
+    stage: "gs3",
     result: "W",
     score: "5-0"
   },
   {
     team: "Uzbekistan",
-    stage: "gs5",
+    stage: "gs3",
     result: "L",
-    score: "0-5"
+    score: "5-0"
   },
-  
+    {
+    team: "Colombia",
+    stage: "gs2",
+    result: "W",
+    score: "1-0"
+  },
+   {
+    team: "Congo DR",
+    stage: "gs2",
+    result: "L",
+    score: "1-0"
+  },
 ];
 
 // Add manual results only if they are missing
