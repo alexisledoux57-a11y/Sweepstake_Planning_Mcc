@@ -1,6 +1,6 @@
 {
-  "date": "28 June 2026",
-  "matchesPlayed": 71,
+  "date": "29 June 2026",
+  "matchesPlayed": 72,
   "results": [
     {
       "team": "Mexico",
@@ -829,6 +829,18 @@
       "stage": "gs3",
       "result": "D",
       "score": "3-3"
+    },
+    {
+      "team": "South Africa",
+      "stage": "r32",
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "team": "Canada",
+      "stage": "r32",
+      "result": "W",
+      "score": "0-1"
     },
     {
       "team": "Spain",
