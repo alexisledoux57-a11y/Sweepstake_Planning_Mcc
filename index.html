@@ -385,16 +385,30 @@ async function fetchResults(){
     var beforePts={};PAR.forEach(function(p){beforePts[p.name]=calcPts(p);});
     var ranked0=getRanked();var br={};ranked0.forEach(function(p,i){br[p.name]=i+1;});
 
-    results={};
-    (parsed.results||[]).forEach(function(r){
-      if(!r.team)return;
-      if(!results[r.team])results[r.team]={};
-      if(r.qualify_r32!==undefined)results[r.team].qualify_r32=!!r.qualify_r32;
-      else if(r.stage&&r.result){
-        results[r.team][r.stage]=r.result;
-        if(r.score)results[r.team][r.stage+'_sc']=r.score;
-      }
-    });
+  results={};
+  (parsed.results||[]).forEach(function(r){
+    if(!r.team)return;
+    if(!results[r.team])results[r.team]={};
+  
+    var stage = r.stage ? String(r.stage).toLowerCase() : "";
+  
+    // Manual qualification flag, if results.json already provides it
+    if(r.qualify_r32!==undefined){
+      results[r.team].qualify_r32=!!r.qualify_r32;
+    }
+  
+    // Automatic qualification:
+    // if a team appears in any knockout round, they qualified for R32
+    if(["r32","r16","qf","sf","f"].includes(stage)){
+      results[r.team].qualify_r32=true;
+    }
+  
+    // Only mark the actual match stage as played if we have a result
+    if(stage && r.result){
+      results[r.team][stage]=r.result;
+      if(r.score)results[r.team][stage+'_sc']=r.score;
+    }
+  });
 
     prevRanks=br;
     showSummary(parsed,beforePts);renderAll();
