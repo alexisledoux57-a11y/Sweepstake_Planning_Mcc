@@ -433,7 +433,10 @@ function showSummary(parsed,beforePts){
   if(!mr.length&&!qs.length){document.getElementById('smc').innerHTML='<p class="nr" style="padding:8px">No new completed results yet.</p>';document.getElementById('smp').style.display='block';return;}
   var changes={};PAR.forEach(function(p){var d=calcPts(p)-(beforePts[p.name]||0);if(d>0)changes[p.name]=d;});
   var html='';
-  mr.forEach(function(r){
+  if(mr.length > 10){
+  html += '<div class="ssl">Latest 5 completed games</div>';
+}
+  mr.slice(-10).forEach(function(r){
     var c=tc(r.team);var fl=c?'<img class="sf" src="'+fu(c)+'" alt="">':'';
     var lbl=r.result==='W'?'Won':r.result==='D'?'Drew':'Lost';
     var stg={gs1:'G1',gs2:'G2',gs3:'G3',r32:'R32',r16:'R16',qf:'QF',sf:'SF',f:'Final'}[r.stage]||r.stage;
