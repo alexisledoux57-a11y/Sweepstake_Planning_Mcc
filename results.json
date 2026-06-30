@@ -1,6 +1,6 @@
 {
   "date": "30 June 2026",
-  "matchesPlayed": 77,
+  "matchesPlayed": 78,
   "results": [
     {
       "team": "Mexico",
@@ -904,6 +904,12 @@
     },
     {
       "team": "Cape Verde",
+      "stage": "gs3",
+      "result": "D",
+      "score": "0-0"
+    },
+    {
+      "team": "Saudi Arabia",
       "stage": "gs3",
       "result": "D",
       "score": "0-0"
