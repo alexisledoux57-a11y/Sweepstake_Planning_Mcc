@@ -1,6 +1,6 @@
 {
   "date": "30 June 2026",
-  "matchesPlayed": 76,
+  "matchesPlayed": 77,
   "results": [
     {
       "team": "Mexico",
@@ -907,6 +907,18 @@
       "stage": "gs3",
       "result": "D",
       "score": "0-0"
+    },
+    {
+      "team": "Portugal",
+      "stage": "gs2",
+      "result": "W",
+      "score": "5-0"
+    },
+    {
+      "team": "Uzbekistan",
+      "stage": "gs2",
+      "result": "L",
+      "score": "5-0"
     },
     {
       "team": "Colombia",
