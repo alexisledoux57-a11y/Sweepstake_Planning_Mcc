@@ -272,7 +272,7 @@ const manualResults = [
   },
     {
     team: "Saudi Arabia",
-    stage: "gs2",
+    stage: "gs3",
     result: "D",
     score: "0-0"
   },
