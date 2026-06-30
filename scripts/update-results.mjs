@@ -278,13 +278,13 @@ const manualResults = [
   },
   {
     team: "Portugal",
-    stage: "gs3",
+    stage: "gs2",
     result: "W",
     score: "5-0"
   },
   {
     team: "Uzbekistan",
-    stage: "gs3",
+    stage: "gs2",
     result: "L",
     score: "5-0"
   },
