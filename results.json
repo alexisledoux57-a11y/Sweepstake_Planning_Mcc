@@ -1,6 +1,6 @@
 {
   "date": "30 June 2026",
-  "matchesPlayed": 75,
+  "matchesPlayed": 76,
   "results": [
     {
       "team": "Mexico",
@@ -865,6 +865,18 @@
       "stage": "r32",
       "result": "W",
       "score": "4-5"
+    },
+    {
+      "team": "Netherlands",
+      "stage": "r32",
+      "result": "L",
+      "score": "3-4"
+    },
+    {
+      "team": "Morocco",
+      "stage": "r32",
+      "result": "W",
+      "score": "3-4"
     },
     {
       "team": "Spain",
