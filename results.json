@@ -1,6 +1,6 @@
 {
   "date": "30 June 2026",
-  "matchesPlayed": 78,
+  "matchesPlayed": 79,
   "results": [
     {
       "team": "Mexico",
@@ -877,6 +877,18 @@
       "stage": "r32",
       "result": "W",
       "score": "3-4"
+    },
+    {
+      "team": "Ivory Coast",
+      "stage": "r32",
+      "result": "L",
+      "score": "1-2"
+    },
+    {
+      "team": "Norway",
+      "stage": "r32",
+      "result": "W",
+      "score": "1-2"
     },
     {
       "team": "Spain",
