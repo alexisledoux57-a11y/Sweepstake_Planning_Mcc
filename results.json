@@ -1,6 +1,6 @@
 {
   "date": "2 July 2026",
-  "matchesPlayed": 83,
+  "matchesPlayed": 84,
   "results": [
     {
       "team": "Mexico",
@@ -937,6 +937,18 @@
       "stage": "r32",
       "result": "L",
       "score": "3-2"
+    },
+    {
+      "team": "United States",
+      "stage": "r32",
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "team": "Bosnia & Herz.",
+      "stage": "r32",
+      "result": "L",
+      "score": "2-0"
     },
     {
       "team": "Spain",
