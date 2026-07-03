@@ -1,6 +1,6 @@
 {
-  "date": "2 July 2026",
-  "matchesPlayed": 84,
+  "date": "3 July 2026",
+  "matchesPlayed": 86,
   "results": [
     {
       "team": "Mexico",
@@ -949,6 +949,30 @@
       "stage": "r32",
       "result": "L",
       "score": "2-0"
+    },
+    {
+      "team": "Spain",
+      "stage": "r32",
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "team": "Austria",
+      "stage": "r32",
+      "result": "L",
+      "score": "3-0"
+    },
+    {
+      "team": "Portugal",
+      "stage": "r32",
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "team": "Croatia",
+      "stage": "r32",
+      "result": "L",
+      "score": "2-1"
     },
     {
       "team": "Spain",
