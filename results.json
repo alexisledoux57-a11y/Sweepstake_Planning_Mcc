@@ -1,6 +1,6 @@
 {
-  "date": "3 July 2026",
-  "matchesPlayed": 87,
+  "date": "4 July 2026",
+  "matchesPlayed": 88,
   "results": [
     {
       "team": "Mexico",
@@ -985,6 +985,18 @@
       "stage": "r32",
       "result": "L",
       "score": "2-0"
+    },
+    {
+      "team": "Australia",
+      "stage": "r32",
+      "result": "L",
+      "score": "3-5"
+    },
+    {
+      "team": "Egypt",
+      "stage": "r32",
+      "result": "W",
+      "score": "3-5"
     },
     {
       "team": "Spain",
