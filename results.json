@@ -1,6 +1,6 @@
 {
   "date": "4 July 2026",
-  "matchesPlayed": 88,
+  "matchesPlayed": 89,
   "results": [
     {
       "team": "Mexico",
@@ -997,6 +997,18 @@
       "stage": "r32",
       "result": "W",
       "score": "3-5"
+    },
+    {
+      "team": "Colombia",
+      "stage": "r32",
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "team": "Ghana",
+      "stage": "r32",
+      "result": "L",
+      "score": "1-0"
     },
     {
       "team": "Spain",
