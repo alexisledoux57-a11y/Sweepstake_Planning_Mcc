@@ -1,6 +1,6 @@
 {
   "date": "6 July 2026",
-  "matchesPlayed": 94,
+  "matchesPlayed": 95,
   "results": [
     {
       "team": "Mexico",
@@ -1057,6 +1057,18 @@
       "stage": "r16",
       "result": "W",
       "score": "2-3"
+    },
+    {
+      "team": "Portugal",
+      "stage": "r16",
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "team": "Spain",
+      "stage": "r16",
+      "result": "W",
+      "score": "0-1"
     },
     {
       "team": "Spain",
