@@ -1,6 +1,6 @@
 {
   "date": "6 July 2026",
-  "matchesPlayed": 93,
+  "matchesPlayed": 94,
   "results": [
     {
       "team": "Mexico",
@@ -1117,6 +1117,18 @@
       "stage": "gs2",
       "result": "L",
       "score": "1-0"
+    },
+    {
+      "team": "Argentina",
+      "stage": "r32",
+      "result": "W",
+      "score": "3-2"
+    },
+    {
+      "team": "Cape Verde",
+      "stage": "r32",
+      "result": "W",
+      "score": "3-2"
     }
   ]
 }
