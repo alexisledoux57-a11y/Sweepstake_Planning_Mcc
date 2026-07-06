@@ -300,6 +300,18 @@ const manualResults = [
     result: "L",
     score: "1-0"
   },
+   {
+      "team": "Argentina",
+      "stage": "r32",
+      "result": "W",
+      "score": "3-2"
+    },
+    {
+      "team": "Cape Verde",
+      "stage": "r32",
+      "result": "W",
+      "score": "3-2"
+    },
 ];
 
 // Add manual results only if they are missing
