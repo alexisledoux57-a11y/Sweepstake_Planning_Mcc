@@ -309,7 +309,7 @@ const manualResults = [
     {
       "team": "Cape Verde",
       "stage": "r32",
-      "result": "W",
+      "result": "L",
       "score": "3-2"
     },
 ];
