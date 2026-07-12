@@ -1,6 +1,6 @@
 {
   "date": "12 July 2026",
-  "matchesPlayed": 100,
+  "matchesPlayed": 102,
   "results": [
     {
       "team": "Mexico",
@@ -1047,6 +1047,18 @@
       "score": "1-2"
     },
     {
+      "team": "Mexico",
+      "stage": "r16",
+      "result": "L",
+      "score": "2-3"
+    },
+    {
+      "team": "England",
+      "stage": "r16",
+      "result": "W",
+      "score": "2-3"
+    },
+    {
       "team": "Portugal",
       "stage": "r16",
       "result": "L",
@@ -1129,6 +1141,18 @@
       "stage": "qf",
       "result": "W",
       "score": "1-2"
+    },
+    {
+      "team": "Argentina",
+      "stage": "qf",
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "team": "Switzerland",
+      "stage": "qf",
+      "result": "L",
+      "score": "3-1"
     },
     {
       "team": "Spain",
