@@ -1,6 +1,6 @@
 {
-  "date": "19 July 2026",
-  "matchesPlayed": 104,
+  "date": "20 July 2026",
+  "matchesPlayed": 105,
   "results": [
     {
       "team": "Mexico",
@@ -1177,6 +1177,18 @@
       "stage": "sf",
       "result": "W",
       "score": "1-2"
+    },
+    {
+      "team": "Spain",
+      "stage": "f",
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "team": "Argentina",
+      "stage": "f",
+      "result": "L",
+      "score": "1-0"
     },
     {
       "team": "Spain",
